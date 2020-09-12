@@ -1,0 +1,253 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "api",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/route": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-route"
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-route",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "region": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "route": {
+                      "region": 1,
+                      "dataVersion": 1,
+                      "assetIdD": " ",
+                      "abbreviationStandardabbrvStandard": "",
+                      "routeId": " ",
+                      "fuelOptions": {
+                        "userID": " ",
+                        "password": " ",
+                        "account": " ",
+                        "fuelCapacityfuelCap": 0,
+                        "level": 0,
+                        "MPG": 0
+                      },
+                      "stops": [
+                        {
+                          "ID": "",
+                          "address": {
+                            "streetAddress": "509 Walker Road",
+                            "extendedAddress": "",
+                            "streetNumber": "509",
+                            "streetName": "Walker Road",
+                            "city": "Endicott",
+                            "county": "Broome",
+                            "state": {
+                              "name": "New York",
+                              "abbrv": "NY"
+                            },
+                            "country": {
+                              "name": "United States",
+                              "abbrv": "USA"
+                            },
+                            "postalCode": "13760"
+                          },
+                          "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                              -76.12345,
+                              42.12345
+                            ]
+                          },
+                          "formattedAddress": " ",
+                          "splc": null,
+                          "region": "NA",
+                          "label": " ",
+                          "placeName": " ",
+                          "placeId": " ",
+                          "speedLimitHeading": null,
+                          "IncludeTrimblePlaceIDs": false,
+                          "costs": {
+                            "costOfStop": 0,
+                            "hoursPerStop": 1.25,
+                            "loaded": false,
+                            "onDuty": false,
+                            "useOrigin": false
+                          },
+                          "isViaPoint": false
+                        }
+                      ],
+                      "routingProfile": {
+                        "vehicleType": "Heavy Duty|Medium Duty|Light Duty|School Bus|RV|Auto|...",
+                        "vehicleProfile": "TwentyEightDoubleTrailer | FortyEightSemiTrailer...",
+                        "units": "Imperial|Metric",
+                        "distanceUnits": "Imperial|Metric",
+                        "fuelUnits": "Imperial|Metric",
+                        "vehicleOptions": {
+                          "vehicleConfig": {
+                            "height": 156,
+                            "width": 96,
+                            "length": 1500,
+                            "weight": 9000,
+                            "axles": 6,
+                            "maxWeightPerAxleGroup": 8000
+                          },
+                          "isLcv": "true",
+                          "fuelType": "gasoline | diesel | electric | hydrogen | lng | lpg",
+                          "fuelConsumption": 10,
+                          "emissionType": "Euro0 | …| EuroVI | EuroEEV ",
+                          "isRefrigerated": "true",
+                          "isPropaneRestricted": "true",
+                          "isMinPollutionVehicle": "true",
+                          "isHybrid": "true",
+                          "emissionScheme": " ",
+                          "governorSpeedLimit": 65,
+                          "hazmatType": [
+                            "general | explosives | corrosive | ..."
+                          ],
+                          "tunnelCategory": "tunnelBCDE … tunnelE ",
+                          "isHarmfulToWater": "true",
+                          "trailers": [
+                            {
+                              "type": "trailer | caravan",
+                              "length": 300,
+                              "weight": 7000,
+                              "axles": 2
+                            },
+                            {
+                              "type": "trailer",
+                              "length": 400,
+                              "weight": 4000,
+                              "axles": 2
+                            }
+                          ]
+                        },
+                        "routingOptions": {
+                          "routeType": "practical | shortest | fastest",
+                          "useHighwayOnly": "true",
+                          "useOpenBorders": "true",
+                          "ferries": "avoid | discourage | use",
+                          "tollRoads": "avoid | discourage | use",
+                          "crossStreetTurns": "discourage | use",
+                          "elevationLimit": 5000,
+                          "sideOfStreetAdherence": "Minimal | Moderate |...| Adhere | StronglyAdhere",
+                          "useMaintainHeading": "true|false",
+                          "useStateAndNationalNetwork": "true",
+                          "useOverrideRestrictions": "true",
+                          "useCustomRoadSpeeds": "true",
+                          "customRoadSpeeds": [
+                            {
+                              "roadClass": "interstate",
+                              "areaType": "urban",
+                              "speed": 55
+                            }
+                          ],
+                          "avoidFavorSets": [
+                            "names_afSet1",
+                            "123",
+                            "names_afSet2",
+                            "789"
+                          ],
+                          "avoidCountry": [],
+                          "favorCountry": [],
+                          "avoidState": [],
+                          "favorState": [],
+                          "avoidHighways": [],
+                          "restrictionZones": {
+                            "allow": [
+                              "congestionZone",
+                              "environmentalZones"
+                            ],
+                            "avoid": [
+                              "lowEmissionZone",
+                              "ultraLowEmission"
+                            ],
+                            "warn": []
+                          },
+                          "useSites": "true",
+                          "resequenceStops": "finalStopNotFixed | finalStopFixed",
+                          "useHubRouting": "true",
+                          "useTraffic": "true",
+                          "trafficLookaheadDistance": 60,
+                          "estimatedTimeOptions": {
+                            "timeOption": 0,
+                            "dayOfWeek": 0,
+                            "date": "mm/dd/yyyy",
+                            "time": "hh:mmZ",
+                            "responseTimeZone": " "
+                          }
+                        }
+                      },
+                      "hosOptions": {},
+                      "hosRuleType": "0 … 7 ",
+                      "hosRuleTypeAlt": "0 … 7",
+                      "useCycleReset": "true",
+                      "useCustomPlaces": "true",
+                      "splitShortRestBreak": "false",
+                      "splitDailyRest": "false",
+                      "customBreakDurations": {
+                        "shortBreakDuration": 30,
+                        "endOfDutyBreakDuration": 10,
+                        "cycleResetBreakDuration": 34,
+                        "driverSwitchBreakDuration": 5,
+                        "borderCrossingWaitDuration": 60
+                      },
+                      "drivers": [
+                        {
+                          "driverId": "driver123 ",
+                          "isActive": "true|false",
+                          "cycleTimeGains": [
+                            0.5,
+                            50.5
+                          ],
+                          "lastCycleResetDateTime": "2017-09-19T08:58:05-04:00",
+                          "last24HourBreakDateTime": "2017-09-19T08:58:05-04:00",
+                          "hosRemaining": {
+                            "consecutiveOnDuty": " ",
+                            "drivingInDay": " ",
+                            "onOffDutyInDay": " ",
+                            "onDutyInWeek": " ",
+                            "canadaWindowOnDutyTime": " ",
+                            "canadaTimeUntilFullDayBreak": " ",
+                            "drivingInWeek": " ",
+                            "onDutyInDay": " ",
+                            "consecutiveDriving": " ",
+                            "drivingFortnightly": " "
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
